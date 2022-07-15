@@ -1,33 +1,32 @@
-#import java.util.*;
-class Previsao {
-    public static void main(String[] args) {
-public static final int mes=10;
-  double valorFinal=0, salario=0, custos=0;
-  int i=0;
-  float x;
-  Scanner sc = new Scanner();
-System.out.println( "Insira o quanto de dinheiro você já tem agora. Se não deseja que isso influencie na conta, digite 0 e dê enter: ";)
-  sc.nextDouble(valorFinal);
-  System.out.println(valorFinal);
-System.out.println("\n\nInsira o valor do salário que você recebe regularmente: ");
-  sc.nextDouble(salario);
-  System.out.println("\n\n"<<"Insira o valor dos custos regulares: ";)
-  sc.nextDouble(custos);
-  for (i=1; i<=MES i++){
-    x = valorFinal;
-    valorFinal += salario;
-    valorFinal-=custos;
-    
-    System.out.println("Valor final do "+i+"º mês: "+valorFinal+"\n\n");
-    
-   }
-   if(x<=valorFinal && i>=2){
-      System.out.println("Você está em superávit de R$"+valorFinal-x+" a cada mês.\n\n");
-    }
-    else if (i>=2){
-      System.out.println("Você está em déficit de R$"+(valorFinal-x)+" a cada mês.\n\n");
-    }
-  return 0;
-  }
-    }
+import java.util.*;
+
+class FazConta {
+	public static void main(String[] args) {
+
+		final int mes = 10;
+		double valorFinal = 0.0, salario = 0.0, custos = 0.0;
+		int i = 0;
+		double x=valorFinal;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Insira o quanto de dinheiro você já tem agora. Se não deseja que isso influencie na conta, digite 0 e dê enter: ");
+		valorFinal= sc.nextDouble();
+		System.out.println(valorFinal);
+    sc.nextDouble();
+		System.out.println("\n\nInsira o valor do salário que você recebe regularmente: ");
+		salario = sc.nextDouble();
+		System.out.println("\n\n" + "Insira o valor dos custos regulares: ");
+		custos= sc.nextDouble();
+		for (i = 1; i <= mes; i++) {
+			x = valorFinal;
+			valorFinal += salario;
+			valorFinal -= custos;
+			System.out.println("Valor final do " + i + "º mês: " + valorFinal + "\n\n");
+
+		}
+		if (x <= valorFinal && i >= 2) {
+			System.out.println("Você está em superávit de R$" + (valorFinal - x) + " a cada mês.\n\n");
+		} else if (i >= 2) {
+			System.out.println("Você está em déficit de R$" + (valorFinal - x) + " a cada mês.\n\n");
+		}
+	}
 }
